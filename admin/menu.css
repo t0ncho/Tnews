@@ -1,0 +1,35 @@
+
+#cssmenu {
+	position: relative;
+	top: 270px;
+	left: 30px;
+	background: url(src/test.png);
+	list-style: none;
+	width: 220px;
+	height: 290px;
+	border-radius: 20px;
+}
+#cssmenu li {
+	position: relative;
+	left: -20px;
+	list-style: none;
+	font: 15px  Verdana, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 8px;
+}
+#cssmenu a {
+	background: url(src/test.png);
+	border-bottom: 1px solid #393939;
+	color: #FF6600;
+	display: block;
+	margin: 0;
+	padding: 8px 12px;
+	text-decoration: none;
+	font-weight:normal;
+}
+#cssmenu a:hover {
+	background: #FF6600  left center no-repeat;
+	color: #fff;
+	padding-bottom: 8px;
+	border-radius: 10px;
+}

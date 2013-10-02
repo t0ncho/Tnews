@@ -1,0 +1,132 @@
+body {
+	line-height: 1; 
+	font:12px/20px Arial;
+	background: url(src/hover.png) repeat scroll 0 0;
+	}
+
+#reclama{
+	position: absolute;
+	width: 300px;
+	height: 600px;
+	left:890px;
+	top: 400px;
+}
+
+
+
+#ContBody{
+	position: absolute;
+	border-radius: 50px;
+	width:1100px;
+	height: 2100px;
+	top:10px;
+	left: 100px;
+	margin-right: 300px;
+	z-index: -1;
+	background: url(src/highlight-bg.png) repeat scroll 0 0;
+	box-shadow: 0px 50px #888888;
+}
+
+#logo{
+	position: absolute;
+	left: 170px;
+
+}
+
+#vhod{
+	position: relative;
+	left: 900px;
+	top: 60px;
+	width: 170px
+}
+#vhod ul li {
+	display: inline;
+	list-style: none;
+	color:#FF6600;
+}
+
+#vhod ul li a{
+	text-decoration: none;
+	color:#FF6600;
+}
+
+/* SEARCH ---------------------------------------------------------------------------------*/
+
+#search {
+	position: absolute;
+	top: 270px;
+	left: 950px;
+}
+
+
+#search input[type="text"] {
+    background: url(src/search-white.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #d7d7d7;
+    width:150px;
+    padding: 6px 15px 6px 35px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+
+    }
+
+
+/* SEARCH ---------------------------------------------------------------------------------*/
+
+/*FOOTER --------------------------------------------------------------------------------- */
+
+footer #fbLogo{
+	position: absolute;
+	top: 2115px;
+	width: 42px;
+	height: 42px;
+	left: 200px;
+
+}
+
+footer #tLogo{
+	position: absolute;
+	top: 2115px;
+	width: 42px;
+	height: 42px;
+	left: 250px;
+
+}
+
+footer h3{
+	position: absolute;
+	top: 2110px;
+	width: 242px;
+	height: 2px;
+	left: 500px;
+	font-size: 10px;
+	color: #3E3E3E;
+	text-align: center;
+
+}
+
+#no{
+	position: absolute;
+	top: 2120px;
+	width: 50px;
+	height: 60px;
+}
+
+/*FOOTER --------------------------------------------------------------------------------- */
+
+/* COMMENT ---------------------------------------------------------------------------------*/
+#coment{
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	top: 1650px;
+	left: 880px;
+}
+
+
+
+/* COMMENT ---------------------------------------------------------------------------------*/
+
+

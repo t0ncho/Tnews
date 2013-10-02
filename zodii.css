@@ -1,0 +1,129 @@
+#Context{
+	background: url(src/small.png) repeat scroll 0 0;
+	position: absolute;
+	width: 735px;
+	height: 2000px;
+	/*background-color: blue;*/
+	top: 300px;
+	left: 110px;
+}
+
+#Context h1{
+	color: #CC3300;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	font-size:60px;
+
+}
+
+
+#oven{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 150px;
+	font-size: 25px;
+}
+
+
+#telec{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 300px;
+	font-size: 25px;
+}
+
+#bliznaci{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 450px;
+	font-size: 25px;
+}
+
+
+#rak{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 600px;
+	font-size: 25px;
+}
+
+#luv{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 750px;
+	font-size: 25px;
+}
+
+#deva{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 900px;
+	font-size: 25px;
+}
+
+#vezni{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 1050px;
+	font-size: 25px;
+}
+
+#skorpion{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 1200px;
+	font-size: 25px;
+}
+
+#strelec{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 1350px;
+	font-size: 25px;
+}
+
+#kozirog{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 1500px;
+	font-size: 25px;
+}
+
+#vodolei{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 1650px;
+	font-size: 25px;
+}
+
+#ribi{
+	position: absolute;
+	width: 700px;
+	height: 150px;
+	left: 20px;
+	top: 1800px;
+	font-size: 25px;
+}

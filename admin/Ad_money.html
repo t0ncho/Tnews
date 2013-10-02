@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Money administration</title>
+	<link rel="stylesheet" href="admin.css" />
+	<link rel="stylesheet" href="menu.css" />
+	<link rel="stylesheet" href="add_news.css" />
+
+
+	<meta charset="UTF-8">
+
+</head>
+<body>
+
+<div id="left">
+	<img src="src/logo.png" alt="" id="logo" >
+
+	<h1>Admin menu.</h1>
+
+	<div id='cssmenu'>
+		<ul>
+		   
+		   <li><a href='Ad_bussiness.php'><span>НОВИНА</span></a></li>
+		    <li><a href='Ad_signs.html'><span>ЗОДИИ</span></a></li>
+		   <li><a href='Ad_photo.html'><span>ФОТО</span></a></li>
+		   <li><a href='Ad_premier.html'><span>ПРЕМИЕРА</span></a></li>
+		   <li><a href='Ad_money.html'><span>ВАЛУТНИ КУРСОВЕ</span></a></li>
+		</ul>
+	</div>
+	<div style="clear:both; margin: 0 0 0px 0;">&nbsp;</div>
+
+
+<!---------------------------------------------------------------------------- -->
+
+	
+	
+		
+
+		<div id="news">
+		<h1>Валутни курсове</h1>
+			<form action="money.php" method="post">
+				<h3>Евро:</h3><textarea maxlength="7" name="EU" id="EU"  rows="1" cols="10"></textarea><br/><br/>
+
+				<h3 style="width:190px;">Британска лира:</h3><textarea maxlength="7" name="UK" id="UK"  rows="1" cols="10"></textarea><br/><br/>
+
+				<h3>Щатски долар:</h3><textarea maxlength="7" name="USA" id="USA"  rows="1" cols="10"></textarea><br/><br/>
+
+				<h3 style="position:absolute; width:100px; left:500px; top:0px;">Японска йена:</h3>
+				<textarea maxlength="7"style="position:absolute; left:500px; top:45px;" name="CHIN"  id="CHIN"  rows="1" cols="10" ></textarea><br/><br/>
+
+				<h3 style="position:absolute; width:200px; left:500px; top:100px;">Нова румънска лея:</h3>
+				<textarea maxlength="7" style="position:absolute; left:500px; top:145px;" name="RUM" id="RUM"  rows="1" cols="10"></textarea><br/><br/>
+
+				<h3 style="position:absolute; width:200px; left:500px; top:200px;">Швейцарски франк:</h3>
+				<textarea maxlength="7" style="position:absolute; left:500px; top:245px;" name="SHED" id="SHED"  rows="1" cols="10"></textarea><br/><br/>
+				
+				
+				<input style="position:absolute; left:300px;" type="submit" class="classname" value="Запиши"><br/><br/><br/><br/>
+				
+			</form>
+		</div>
+				
+
+<!---------------------------------------------------------------------------- -->
+
+
+
+</div>
+
+</body>
+</html>

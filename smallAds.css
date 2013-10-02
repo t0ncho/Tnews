@@ -1,0 +1,139 @@
+/* Small focus news------------------------BUSSINES-------------------------------------*/
+
+#focusBussines{
+	background: url(src/small.png) repeat scroll 0 0;
+	position: absolute;
+	top:900px;
+	left:180px;
+	width: 300px;
+	height:350px;
+	color:red;
+	border-radius: 20px;
+	box-shadow:10px 10px 5px #888888;
+
+}
+
+#focusCrimi{
+	background: url(src/small.png) repeat scroll 0 0;
+	position: absolute;
+	top:900px;
+	left:500px;
+	width: 300px;
+	height:350px;
+	color:red;
+	border-radius: 20px;
+	box-shadow:10px 10px 5px #888888;
+}
+
+#focusSport{
+	background: url(src/small.png) repeat scroll 0 0;
+	position: absolute;
+	top:1300px;
+	left:180px;
+	width: 300px;
+	height:350px;
+	color:red;
+	border-radius: 20px;
+	box-shadow:10px 10px 5px #888888;
+}
+
+#focusHealth{
+	background: url(src/small.png) repeat scroll 0 0;
+	position: absolute;
+	top:1300px;
+	left:500px;
+	width: 300px;
+	height:350px;
+	color:red;
+	border-radius: 20px;
+	box-shadow:10px 10px 5px #888888;
+}
+
+#focusTechnology{
+	background: url(src/small.png) repeat scroll 0 0;
+	position: absolute;
+	top:1700px;
+	left:180px;
+	width: 300px;
+	height:350px;
+	color:red;
+	border-radius: 20px;
+	box-shadow:10px 10px 5px #888888;
+}
+
+#focusTV{
+	background: url(src/small.png) repeat scroll 0 0;
+	position: absolute;
+	top:1700px;
+	left:500px;
+	width: 300px;
+	height:350px;
+	color:red;
+	border-radius: 20px;
+	box-shadow:10px 10px 5px #888888;
+}
+
+
+.titleMini{
+	color:#990000;
+	position: absolute;
+	margin-top: 10px;
+	margin-left:10px;
+	text-decoration: none;
+	list-style: none;
+	font-size: 30px;
+}
+
+#table{
+	position: absolute;
+	top: 55px;
+}
+
+.mini1{
+	position: absolute;
+	width:300px;
+	height: 90px;
+	left: 40px;
+	top: 70px;
+}
+
+.mini2{
+	position: absolute;
+	width:300px;
+	height: 90px;
+	left: 40px;
+	top: 200px;
+}
+
+.miniPic img{
+	position: absolute;
+	width:70px;
+	height:70px;
+	top: 0px;
+	left:-20px;
+}
+
+.minitext{
+	position: absolute;
+	width:150px;
+	height:150px;
+	top: 0px;
+	left:70px;
+	font-size: 15px;
+	text-decoration: none;
+	color:red;
+}
+
+.minitext:hover, .titleMini:hover{
+	text-decoration: underline;
+	
+}
+
+#Zaglavie{
+	text-decoration: none;
+	color:red;
+}
+
+#Zaglavie:hover{
+	text-decoration: underline;
+}

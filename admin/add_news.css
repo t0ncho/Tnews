@@ -1,0 +1,33 @@
+	#news{
+		position: absolute;
+		top: 120px;
+		left: 350px;
+		color:orange;
+
+	}
+
+	#news textarea{
+		resize:none;
+	}
+
+	#txt{
+		position: absolute;
+		left: 300px;
+		top: 48px;
+	}
+
+	#txt_t{
+		position: absolute;
+		left: 300px;
+		top: -0px;
+	}
+
+	#news h1{
+	position: absolute;
+	top: -120px;
+	left: 50px;
+	font-size: 59px;
+}
+
+	
+

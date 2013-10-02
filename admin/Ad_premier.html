@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main administration</title>
+	<link rel="stylesheet" href="admin.css" />
+	<link rel="stylesheet" href="menu.css" />
+	<link rel="stylesheet" href="add_news.css" />
+
+	<meta charset="UTF-8">
+
+</head>
+<body>
+
+<div id="left">
+	<img src="src/logo.png" alt="" id="logo" >
+
+	<h1>Admin menu.</h1>
+
+	<div id='cssmenu'>
+		<ul>
+		   
+		   <li><a href='Ad_bussiness.php'><span>НОВИНА</span></a></li>
+		    <li><a href='Ad_signs.html'><span>ЗОДИИ</span></a></li>
+		   <li><a href='Ad_photo.html'><span>ФОТО</span></a></li>
+		   <li><a href='Ad_premier.html'><span>ПРЕМИЕРА</span></a></li>
+		   <li><a href='Ad_money.html'><span>ВАЛУТНИ КУРСОВЕ</span></a></li>
+		</ul>
+	</div>
+	<div style="clear:both; margin: 0 0 0px 0;">&nbsp;</div>
+
+<!---------------------------------------------------------------------------- -->
+
+	
+	
+		
+
+		<div id="news">
+		<h1>ПРЕМИЕРА</h1>
+			<form action="premier.php" method="post">
+				<h3>Заглавие:</h3><textarea name="title" id="title"  rows="3" cols="30"></textarea><br/><br/>
+				<h3>Жанр:</h3><textarea name="genre" id="genre" rows="1" cols="30"></textarea><br/><br>
+				<h3 id="txt_t">Текст:</h3><textarea name="txt" id="txt" rows="32" cols="80"></textarea><br/><br>
+				<h3 id="txt_i">Снимка:</h3><textarea name="image" id="img" rows="1" cols="30"></textarea><br/><br>
+				<input type="submit" class="classname" value="Запиши">
+
+			</form>
+		</div>
+				
+
+<!---------------------------------------------------------------------------- -->
+
+
+
+</div>
+
+</body>
+</html>

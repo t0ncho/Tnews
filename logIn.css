@@ -1,0 +1,40 @@
+ #logIn{
+ 	position: absolute;
+ 	background: url(src/small.png) repeat scroll 0 0;
+ 	width: 600px;
+ 	height: 600px;
+ 	top: 200px;
+ 	left: 350px;
+ 	border-radius:60px; 
+	box-shadow: 10px 10px 20px #888888;
+
+ }
+
+ #logIn h1{
+	color: #CC3300;
+	position: absolute;
+	top: 10px;
+	left: 200px;
+	font-size:60px;
+
+}
+
+#log{
+	position: absolute;
+	top: 150px;
+	left: 200px;
+}
+
+#logIn a{
+	text-decoration: none;
+	color:red;
+	position:relative;
+	top: 400px;
+	left: 140px;
+	font-size: 15px;
+	padding-left:30px;
+}
+
+#logIn a:hover {
+	text-decoration: underline;
+}

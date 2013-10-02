@@ -1,0 +1,50 @@
+#premierBG{
+	position: absolute;
+	width: 290px;
+	height: 300px;
+	left:890px;
+	top: 1300px;
+	background: url(src/small.png);
+	border-radius: 20px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#Ptable{
+	position: absolute;
+	top: 50px;
+}
+
+#Ptitle{
+	color:red;
+	font-size: 16px;
+	padding-left: 18px;
+}
+
+#Pgenre{
+	color:#4A4A4A;
+	position: inline-block;
+	padding-left: 50px;
+	font-size: 12px;
+}
+
+#Ptxt{
+	
+	
+	word-wrap:break-word;
+	overflow: hidden;
+}
+
+#Pimg{
+	position: inline;
+	padding-left: 15px;
+}
+
+p.test{
+margin-top: 0px;
+width:100px;
+height:140px;
+word-wrap:break-word;
+overflow: hidden;
+}
+
+/*PREMIE --------------------------------------------------------------------------------*/

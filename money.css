@@ -1,0 +1,62 @@
+/*MONEY --------------------------------------------------------------------------------- */
+#Money{
+	position: absolute;
+	width: 290px;
+	height: 150px;
+	left:890px;
+	top: 1000px;
+	background: url(src/small.png);
+	border-radius: 20px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#titleMoney{
+	color:red;
+	font-size: 16px;
+	padding-left: 18px;
+}
+
+
+#EUR{
+	position: absolute;
+	top: 50px;
+	left: 10px;
+}
+
+#GBP{
+	position: absolute;
+	top: 80px;
+	left: 10px;
+}
+
+#USD{
+	position: absolute;
+	top: 110px;
+	left: 10px;
+}
+
+#JPY{
+	position: absolute;
+	top: 50px;
+	left: 150px;
+}
+
+#RON{
+	position: absolute;
+	top: 80px;
+	left: 150px;
+}
+
+#CHF{
+	position: absolute;
+	top: 110px;
+	left: 150px;
+}
+
+.value{
+	position: absolute;
+	left: 30px;
+	width: 100px;
+	top: -15px;
+}
+/*MONEY --------------------------------------------------------------------------------- */

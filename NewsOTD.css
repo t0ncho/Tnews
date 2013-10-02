@@ -1,0 +1,77 @@
+/* News of the day---------------------------------------------------------------------------*/
+
+#newsOftheDay{
+	position: absolute;
+	background: url(src/small.png) repeat scroll 0 0;
+	width: 730px;
+	height: 450px; 
+	top: 270px;
+	left: 130px;
+	box-shadow: 10px 10px 20px #888888;
+	border-radius: 20px;
+}
+
+#focus_title{
+	position: absolute;
+	top: 280px;
+	left:150px;
+	color:#CC3300;
+	font-size: 30px;
+
+}
+	
+
+#slider{
+	position: absolute;
+	top: 330px;
+	left: 180px;
+	width: 700px;
+	height: 400px;
+}
+
+
+
+ul.bjqs-controls.v-centered li a{
+/*prev , next button style*/
+	display:block;
+	padding:10px;
+	background:#000;
+	color:#fff;
+	text-decoration: none;
+}
+
+ul.bjqs-controls.v-centered li a:hover{
+/*prev , next button style*/
+	background:#CC3300;
+	color:#fff;
+}
+
+
+ol.bjqs-markers li a{
+/*number button style*/
+	padding:5px 10px;
+	background:#000;
+	color:#fff;
+	margin:5px;
+	text-decoration: none;
+}
+
+ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li a:hover{
+/* color of number buttons*/
+	background: #CC3300;
+}
+
+p.bjqs-caption{
+/*color of the footer*/
+	background: rgba(255,255,255,0.8);
+	height: 30px;
+	font-size: 20px;
+}
+
+.bjqs li{
+	color:#CC3300;
+	font-size: 12px;
+}
+
+/* News of the day---------------------------------------------------------------------------*/

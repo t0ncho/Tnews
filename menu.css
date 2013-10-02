@@ -1,0 +1,147 @@
+/* MENU ---------------------------------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600); 
+
+#cssmenu, #cssmenu > ul{
+		
+	background: url(src/highlight-bg.png) repeat scroll 0 0;
+	padding-bottom: 3px;
+	border-radius: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	width:960px;
+	height:30px;
+	margin-top:70px;
+	margin-left: 170px;
+	
+}
+
+#cssmenu:before, #cssmenu:after, #cssmenu > ul:before, #cssmenu > ul:after {
+
+	content: '';
+	
+}
+
+
+#cssmenu:after, #cssmenu > ul:after {
+
+	clear: both;
+	
+}
+
+
+#cssmenu > ul{
+	background: url(src/menu-bg.png) repeat scroll 0 0;
+	margin: 0;
+	padding: 0;
+	border-radius: 20px;
+}
+
+#cssmenu > ul li{
+	left:8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-radius: 20px;
+}
+
+#cssmenu > ul > li{
+
+	float: left;
+	position: relative;
+	border-radius: 20px;
+}
+
+#cssmenu > ul > li > a{
+
+	padding: 8px 26px;
+	display: block;
+	color: white;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 0 -1px 0 #9e3825;
+	text-shadow: 0 -1px 0 rgba(116, 37, 2, .70);
+	line-height: 18px;
+	border-radius: 20px;
+}
+
+
+#cssmenu > ul > li:hover > a{
+
+	background: url(src/images.png) repeat scroll 0 0;
+	text-shadow: 0 -1px 0 #97321f
+	text-shadow: 0 -1px 0 rgba(122, 42, 26, .64);
+	font-size: 17px;
+}
+
+
+/* MENU ---------------------------------------------------------------------------*/
+
+
+/* TTILE Weather---------------------------------------------------------------------------*/
+#weather{
+	position: absolute;
+	width:1120px;
+	height: 130px;
+	left: 90px;
+	top:150px;
+	z-index: -1;
+}
+
+
+#focusWeather{
+	position: absolute;
+	width:1120px;
+	height: 110px;
+	left: 90px;
+	top:150px;
+}
+
+
+#weather1{
+	position: absolute;
+	width:300px;
+	height: 90px;
+	left: 40px;
+	top: 10px;
+}
+
+#weather2{
+	position: absolute;
+	width:300px;
+	height: 90px;
+	left: 410px;
+	top: 10px;
+}
+
+#weather3{
+	position: absolute;
+	width:300px;
+	height: 90px;
+	left: 780px;
+	top: 10px;
+}
+
+.item-thumb{
+	position: absolute;
+	width:100px;
+	height: 100px;
+	top: 5px;
+	left:10px;
+}
+
+.weather-text{
+	position: absolute;
+	width:160px;
+	height: 70px;
+	top: -5px;
+	left:130px;
+	color: #971B1E;
+	font-weight: bold;
+	text-decoration: none;
+	list-style: none;
+
+}
+
+
