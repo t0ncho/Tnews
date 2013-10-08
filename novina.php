@@ -32,9 +32,9 @@
 	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='main.php'">
 	<div id="vhod">
 		<ul>
-			<li><a href='logIn.html'><span>Вход</span></a></li>
+			<li><a href='logIn.php'><span>Вход</span></a></li>
 			<li>|</li>
-			<li><a href='reg.html'><span>Регистрация</span></a></li>
+			<li><a href='reg.php'><span>Регистрация</span></a></li>
 		</ul>
 	</div>
 
@@ -43,14 +43,23 @@
 
 	<div id='cssmenu'>
 	<ul>
-	    <li><a href='main.php'><span>Начало</span></a></li>
-	   <li><a href='bussiness.php'><span>Бизнес</span></a></li>
-	   <li><a href='krimi.php'><span>Крими</span></a></li>
-	   <li><a href='sport.php'><span>Спорт</span></a></li>
-	   <li><a href='health.php'><span>Здраве</span></a></li>
-	   <li><a href='techno.php'><span>Технологии</span></a></li>
-   	   <li><a href='lifes.php'><span>Лайфстайл</span></a></li>
+	   <li><a href='main.php'><span>Начало</span></a></li>
 	   <li><a href='signs.php'><span>Зодии</span></a></li>
+	   
+	   <?php
+	  	 	mysql_connect("localhost", "root","") or die(mysql_error());
+			mysql_select_db("tnews2") or die(mysql_error());
+  			mysql_query("set names 'utf8'");  
+
+
+
+			$queryT = "SELECT id,name FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
+			$resultT = mysql_query($queryT) or die(mysql_error()."[".$queryT."]");
+		?>
+
+		<?php while($rowT = mysql_fetch_array($resultT)){?>
+				<li><a href='categories.php?id=<?= $rowT['path'] ?>&cat_id=<?=$rowT['id']?>.php'><span><?php echo $rowT["name"]; ?></span></a></li>
+		<?php }?>
 
 	</ul>
 	</div>

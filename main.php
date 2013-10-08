@@ -31,9 +31,9 @@
 	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='main.php'">
 	<div id="vhod">
 		<ul>
-			<li><a href='logIn.html'><span>Вход</span></a></li>
+			<li><a href='logIn.php'><span>Вход</span></a></li>
 			<li>|</li>
-			<li><a href='reg.html'><span>Регистрация</span></a></li>
+			<li><a href='reg.php'><span>Регистрация</span></a></li>
 		</ul>
 	</div>
 
@@ -57,7 +57,7 @@
 		?>
 
 		<?php while($rowT = mysql_fetch_array($resultT)){?>
-				<li><a href='main.php'><span><?php echo $rowT["name"]; ?></span></a></li>
+				<li><a href='categories.php?id=<?= $rowT['path'] ?>&cat_id=<?=$rowT['id']?>.php'><span><?php echo $rowT["name"]; ?></span></a></li>
 		<?php }?>
 
 	</ul>
