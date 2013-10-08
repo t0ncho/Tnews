@@ -43,13 +43,22 @@
 	<div id='cssmenu'>
 	<ul>
 	   <li><a href='main.php'><span>Начало</span></a></li>
-	   <li><a href='bussiness.php'><span>Бизнес</span></a></li>
-	   <li><a href='krimi.php'><span>Крими</span></a></li>
-	   <li><a href='sport.php'><span>Спорт</span></a></li>
-	   <li><a href='health.php'><span>Здраве</span></a></li>
-	   <li><a href='techno.php'><span>Технологии</span></a></li>
-   	   <li><a href='lifes.php'><span>Лайфстайл</span></a></li>
 	   <li><a href='signs.php'><span>Зодии</span></a></li>
+	   
+	   <?php
+	  	 	mysql_connect("localhost", "root","") or die(mysql_error());
+			mysql_select_db("tnews2") or die(mysql_error());
+  			mysql_query("set names 'utf8'");  
+
+
+
+			$queryT = "SELECT id,name FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
+			$resultT = mysql_query($queryT) or die(mysql_error()."[".$queryT."]");
+		?>
+
+		<?php while($rowT = mysql_fetch_array($resultT)){?>
+				<li><a href='main.php'><span><?php echo $rowT["name"]; ?></span></a></li>
+		<?php }?>
 
 	</ul>
 	</div>
@@ -127,232 +136,59 @@
 
 </div>
 	<!-- ----------------------------------------------------------------------------- -->
-
-	<div id="focusBussines" >
-		<a class="titleMini" href="bussiness.php">Бизнес</a>
-
-		<?php  
+	<?php
 			mysql_connect("localhost", "root","") or die(mysql_error());
 			mysql_select_db("tnews2") or die(mysql_error());
+			mysql_query("set names 'utf8'");  
 
 			$rowsPerPage = 2;
 
-			$query = "SELECT id,name,text,img,cat_id FROM news WHERE cat_id=2 ORDER BY ID DESC LIMIT  $rowsPerPage";
-			$result = mysql_query($query) or die(mysql_error()."[".$query."]");
-		?>
 
-		<table id="table" width="100%">
-			<?php while ($row = mysql_fetch_array($result)){
-				
-				if($row['cat_id'] == 2){
+			$query1 = "SELECT id,name FROM categories WHERE id>1 ORDER BY ID";
+			$result1 = mysql_query($query1) or die(mysql_error()."[".$query1."]");
+
+			
+
+ ?>
+ <?php
+	$SmallNews = 1;
+
+while($row = mysql_fetch_array($result1)){ ?>
+	<?php 
+	//var_dump($SmallNews);
+	if( $SmallNews % 2 == 0){?>
+	<div class="Chetno" >
+	<?php } else {?>
+	<div class="Nechetno" >
+	<?php }?>
+		<a class="titleMini" href="categories.php?id=<?= $row['path'] ?>&cat_id=<?=$row['id']?>"><?php echo $row["name"];  ?></a>
+			<?php
+			$check = $row['id'];
+			$query2 = "SELECT id,name,text,img,cat_id FROM news WHERE cat_id='$check' AND id>1 ORDER BY ID DESC LIMIT 2";
+			$result2 = mysql_query($query2) or die(mysql_error()."[".$query2."]");
+
+			while($rowB = mysql_fetch_array($result2)){
+
 			?>
-	
+			<table class="table" width="100%">
 				<tr>
 					<td  align="left" width="150" >
-						<img class="pic" src="<?php echo $row["img"];?>" height="120" width="120">
+						<img class="pic" src="<?php echo $rowB["img"];?>" height="120" width="120">
 					</td>
-				<td  align="left" colspan="100%" id="title" ><a id="Zaglavie" href="novina.php?id=<?= $row['id'] ?>&cat_id=<?=$row['cat_id']?>" >  <?php echo $row['name'];  ?></a></td>
+					<td  align="left" colspan="100%"  ><a class="Zaglavie" href="novina.php?id=<?= $rowB['id'] ?>&cat_id=<?=$rowB['cat_id']?>" >  <?php echo $rowB['name'];  ?></a></td>
 
 				</tr>
-					<tr >
-						<td colspan="100%"><hr/> </td>
-					</tr>
-					<?php
-					
-					}
-					}
-					?>
+				<tr >
+					<td colspan="100%"><hr/> </td>
+				</tr>
 			</table>
-					
+			<?php 
+			} ?>
+		<?php	$SmallNews = $SmallNews + 1; ?>
+		</div>
+<?php }  ?>
 
-	</div>
-<!-- ----------------------------------------------------------------------------- -->
-	<div id="focusCrimi" >
-		<a class="titleMini" href="krimi.php">Крими</a>
-
-		<?php  
-			mysql_connect("localhost", "root","") or die(mysql_error());
-			mysql_select_db("tnews2") or die(mysql_error());
-
-			$rowsPerPage = 2;
-
-			$query = "SELECT id,name,text,img,cat_id FROM news WHERE cat_id=3 ORDER BY ID DESC LIMIT  $rowsPerPage";
-			$result = mysql_query($query) or die(mysql_error()."[".$query."]");
-		?>
-
-		<table id="table" width="100%">
-			<?php while ($row = mysql_fetch_array($result)){
-				
-				if($row['cat_id'] == 3){
-			?>
 	
-				<tr>
-					<td  align="left" width="150" >
-						<img class="pic" src="<?php echo $row["img"];?>" height="120" width="120">
-					</td>
-				<td  align="left" colspan="100%" id="title" ><a id="Zaglavie" href="novina.php?id=<?= $row['id'] ?>&cat_id=<?=$row['cat_id']?>" >  <?php echo $row['name'];  ?></a></td>
-
-				</tr>
-					<tr >
-						<td colspan="100%"><hr/> </td>
-					</tr>
-					<?php
-					
-					}
-					}
-					?>
-			</table>
-	</div>
-<!-- ----------------------------------------------------------------------------- -->
-	<div id="focusSport" >
-		<a class="titleMini" href="sport.php">Спорт</a>
-
-		<?php  
-			mysql_connect("localhost", "root","") or die(mysql_error());
-			mysql_select_db("tnews2") or die(mysql_error());
-
-			$rowsPerPage = 2;
-
-			$query = "SELECT id,name,text,img,cat_id FROM news WHERE cat_id=4 ORDER BY ID DESC LIMIT  $rowsPerPage";
-			$result = mysql_query($query) or die(mysql_error()."[".$query."]");
-		?>
-
-		<table id="table" width="100%">
-			<?php while ($row = mysql_fetch_array($result)){
-				
-				if($row['cat_id'] == 4){
-			?>
-	
-				<tr>
-					<td  align="left" width="150" >
-						<img class="pic" src="<?php echo $row["img"];?>" height="120" width="120">
-					</td>
-				<td  align="left" colspan="100%" id="title" ><a id="Zaglavie" href="novina.php?id=<?= $row['id'] ?>&cat_id=<?=$row['cat_id']?>" >  <?php echo $row['name'];  ?></a></td>
-
-				</tr>
-					<tr >
-						<td colspan="100%"><hr/> </td>
-					</tr>
-					<?php
-					
-					}
-					}
-					?>
-			</table>	
-	</div>
-<!-- ----------------------------------------------------------------------------- -->
-	<div id="focusHealth" >
-		<a class="titleMini" href="health.php">Здраве</a>
-
-		<?php  
-			mysql_connect("localhost", "root","") or die(mysql_error());
-			mysql_select_db("tnews2") or die(mysql_error());
-
-			$rowsPerPage = 2;
-
-			$query = "SELECT id,name,text,img,cat_id FROM news WHERE cat_id=5 ORDER BY ID DESC LIMIT  $rowsPerPage";
-			$result = mysql_query($query) or die(mysql_error()."[".$query."]");
-		?>
-
-		<table id="table" width="100%">
-			<?php while ($row = mysql_fetch_array($result)){
-				
-				if($row['cat_id'] == 5){
-			?>
-	
-				<tr>
-					<td  align="left" width="150" >
-						<img class="pic" src="<?php echo $row["img"];?>" height="120" width="120">
-					</td>
-				<td  align="left" colspan="100%" id="title" ><a id="Zaglavie" href="novina.php?id=<?= $row['id'] ?>&cat_id=<?=$row['cat_id']?>" >  <?php echo $row['name'];  ?></a></td>
-
-				</tr>
-					<tr >
-						<td colspan="100%"><hr/> </td>
-					</tr>
-					<?php
-					
-					}
-					}
-					?>
-			</table>	
-	</div>
-<!-- ----------------------------------------------------------------------------- -->
-	<div id="focusTechnology" >
-		<a class="titleMini" href="techno.php">Технологии</a>
-
-		<?php  
-			mysql_connect("localhost", "root","") or die(mysql_error());
-			mysql_select_db("tnews2") or die(mysql_error());
-
-			$rowsPerPage = 2;
-
-			$query = "SELECT id,name,text,img,cat_id FROM news WHERE cat_id=6 ORDER BY ID DESC LIMIT  $rowsPerPage";
-			$result = mysql_query($query) or die(mysql_error()."[".$query."]");
-		?>
-
-		<table id="table" width="100%">
-			<?php while ($row = mysql_fetch_array($result)){
-				
-				if($row['cat_id'] == 6){
-			?>
-	
-				<tr>
-					<td  align="left" width="150" >
-						<img class="pic" src="<?php echo $row["img"];?>" height="120" width="120">
-					</td>
-				<td  align="left" colspan="100%" id="title" ><a id="Zaglavie" href="novina.php?id=<?= $row['id'] ?>&cat_id=<?=$row['cat_id']?>" >  <?php echo $row['name'];  ?></a></td>
-
-				</tr>
-					<tr >
-						<td colspan="100%"><hr/> </td>
-					</tr>
-					<?php
-					
-					}
-					}
-					?>
-			</table>
-	</div>
-	<!-- ----------------------------------------------------------------------------- -->
-	<div id="focusTV" >
-		<a class="titleMini" href="lifes.php">Лайфстайл</a>
-
-		<?php  
-			mysql_connect("localhost", "root","") or die(mysql_error());
-			mysql_select_db("tnews2") or die(mysql_error());
-
-			$rowsPerPage = 2;
-
-			$query = "SELECT id,name,text,img,cat_id FROM news WHERE cat_id=7 ORDER BY ID DESC LIMIT  $rowsPerPage";
-			$result = mysql_query($query) or die(mysql_error()."[".$query."]");
-		?>
-
-		<table id="table" width="100%">
-			<?php while ($row = mysql_fetch_array($result)){
-				
-				if($row['cat_id'] == 7){
-			?>
-	
-				<tr>
-					<td  align="left" width="150" >
-						<img class="pic" src="<?php echo $row["img"];?>" height="120" width="120">
-					</td>
-				<td  align="left" colspan="100%" id="title" ><a id="Zaglavie" href="novina.php?id=<?= $row['id'] ?>&cat_id=<?=$row['cat_id']?>" >  <?php echo $row['name'];  ?></a></td>
-
-				</tr>
-					<tr >
-						<td colspan="100%"><hr/> </td>
-					</tr>
-					<?php
-					
-					}
-					}
-					?>
-			</table>
-	</div>
-
-
 
 <!--------------------------------------------------------------------------------- -->
 	<div id="Money" style="top:900px;">
@@ -412,7 +248,7 @@
 <?php  
 			mysql_connect("localhost", "root","") or die(mysql_error());
 			mysql_select_db("tnews") or die(mysql_error());
-
+			mysql_query("set names 'utf8'");  
 
 			$query = "SELECT * FROM premieres ORDER BY ID DESC LIMIT  1";
 			$result = mysql_query($query) or die(mysql_error()."[".$query."]");
