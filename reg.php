@@ -25,7 +25,7 @@
 	
 
 	<div id="ContBody" style="	height: 1200px"></div>
-	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='main.php'">
+	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='Main.php'">
 	<div id="vhod">
 		<ul>
 			<li><a href='logIn.php'><span>Вход</span></a></li>
@@ -38,7 +38,7 @@
 
 	<div id='cssmenu'>
 	<ul>
-	   <li><a href='main.php'><span>Начало</span></a></li>
+	   <li><a href='Main.php'><span>Начало</span></a></li>
 	   <li><a href='signs.php'><span>Зодии</span></a></li>
 	   
 	   <?php
@@ -48,12 +48,12 @@
 
 
 
-			$queryT = "SELECT id,name FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
+			$queryT = "SELECT id,name,path FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
 			$resultT = mysql_query($queryT) or die(mysql_error()."[".$queryT."]");
 		?>
 
 		<?php while($rowT = mysql_fetch_array($resultT)){?>
-				<li><a href='categories.php?id=<?= $rowT['path'] ?>&cat_id=<?=$rowT['id']?>.php'><span><?php echo $rowT["name"]; ?></span></a></li>
+				<li><a href='categories.php?cat_id=<?=$rowT['id']?>.php'><span><?php echo $rowT["name"]; ?></span></a></li>
 		<?php }?>
 
 	</ul>

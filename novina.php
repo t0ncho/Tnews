@@ -29,7 +29,7 @@
 	
 
 	<div id="ContBody"></div>
-	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='main.php'">
+	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='Main.php'">
 	<div id="vhod">
 		<ul>
 			<li><a href='logIn.php'><span>Вход</span></a></li>
@@ -43,7 +43,7 @@
 
 	<div id='cssmenu'>
 	<ul>
-	   <li><a href='main.php'><span>Начало</span></a></li>
+	   <li><a href='Main.php'><span>Начало</span></a></li>
 	   <li><a href='signs.php'><span>Зодии</span></a></li>
 	   
 	   <?php
@@ -53,12 +53,12 @@
 
 
 
-			$queryT = "SELECT id,name FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
+			$queryT = "SELECT id,name,path FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
 			$resultT = mysql_query($queryT) or die(mysql_error()."[".$queryT."]");
 		?>
 
 		<?php while($rowT = mysql_fetch_array($resultT)){?>
-				<li><a href='categories.php?id=<?= $rowT['path'] ?>&cat_id=<?=$rowT['id']?>.php'><span><?php echo $rowT["name"]; ?></span></a></li>
+				<li><a href='categories.php?cat_id=<?=$rowT['id']?>'><span><?php echo $rowT["name"]; ?></span></a></li>
 		<?php }?>
 
 	</ul>
@@ -210,53 +210,7 @@
 </div>
 
 <!------------------------------------------------------------------------------------------------- -->
-	<div id="coment">
-
-		<div id="fb-root"></div>
-			<script>
-  window.fbAsyncInit = function() {
-    // init the FB JS SDK
-    FB.init({
-      appId      : 'YOUR_APP_ID',                        // App ID from the app dashboard
-      channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
-      status     : true,                                 // Check Facebook Login status
-      xfbml      : true                                  // Look for social plugins on the page
-    });
-
-    // Additional initialization code such as adding Event Listeners goes here
-  };
-
-  // Load the SDK asynchronously
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 	
-
-<?php
-
-	mysql_connect("localhost", "root","") or die(mysql_error());
-	mysql_select_db("tnews") or die(mysql_error());
-
-	$query = "SELECT * FROM bussiness ORDER BY ID DESC LIMIT 1";
-	
-  $result = mysql_query($query) or die(mysql_error()."[".$query."]");
-
-?>
-<?php while ($row = mysql_fetch_array($result))
-{
-?>
-<div class="fb-comments" data-href="http://localhost/Tnews/novinaB.php?id=<?php echo $row['ID'] ?>" data-height="200" data-width="300"></div>
-<?php 
-}
-?>
-	</div>
-
 <!------------------------------------------------------------------------------------------------- -->
 
 <footer>

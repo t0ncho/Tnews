@@ -28,7 +28,7 @@
 	
 
 	<div id="ContBody" style="	height: 1700px"></div>
-	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='main.php'">
+	<img src="src/logo.png" alt="" id="logo" onclick="window.location.href='Main.php'">
 	<div id="vhod">
 		<ul>
 			<li><a href='logIn.php'><span>Вход</span></a></li>
@@ -42,7 +42,7 @@
 
 	<div id='cssmenu'>
 	<ul>
-	   <li><a href='main.php'><span>Начало</span></a></li>
+	   <li><a href='Main.php'><span>Начало</span></a></li>
 	   <li><a href='signs.php'><span>Зодии</span></a></li>
 	   
 	   <?php
@@ -52,12 +52,12 @@
 
 
 
-			$queryT = "SELECT id,name FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
+			$queryT = "SELECT id,name,path FROM categories  WHERE id>1 ORDER BY ID  LIMIT 8";
 			$resultT = mysql_query($queryT) or die(mysql_error()."[".$queryT."]");
 		?>
 
 		<?php while($rowT = mysql_fetch_array($resultT)){?>
-				<li><a href='categories.php?id=<?= $rowT['path'] ?>&cat_id=<?=$rowT['id']?>.php'><span><?php echo $rowT["name"]; ?></span></a></li>
+				<li><a href='categories.php?cat_id=<?=$rowT['id']?>'><span><?php echo $rowT["name"]; ?></span></a></li>
 		<?php }?>
 
 	</ul>
@@ -125,11 +125,11 @@
 	mysql_select_db("tnews2") or die(mysql_error());
 	mysql_query("set names 'utf8'");  
 
-	$id=(int) $_GET['id'];
+	
 	$cat_id=(int) $_GET['cat_id'];
 
 
-	var_dump($id);
+
 	var_dump($cat_id);
 
 	$queryC = "SELECT id, name,path  FROM categories WHERE id=$cat_id  ORDER BY ID DESC LIMIT 1";
@@ -233,27 +233,30 @@ $count_news = 0;
 
 
 <?php 
-// колко реда общо имаме ?
-$result  = mysql_query("SELECT COUNT(cat_id) AS numrows FROM news WHERE cat_id=2 ") or die('Error, query failed');
+
+	$id1=(int) $_GET['cat_id'];
+	
+
+$result  = mysql_query("SELECT COUNT(cat_id) AS numrows FROM news WHERE cat_id = $id1") or die('Error, query failed');
 $row	 = mysql_fetch_array($result);
 mysql_query("set names 'utf8'");  
 
 
 $num = $row['numrows']; // броя на редовете
 
-$id=(int) $_GET['id'];
+
 $cat_id=(int) $_GET['cat_id'];
 
 
-$id_Page= $id;
+$id_Page= $cat_id;
 
-var_dump($id_Page);
+//var_dump($id_Page);
 
 $start = ($pageNum -1) * $rowsPerPage;
-if(empty($start))$start=0;  // текуща стартова позиция
+if(empty($start))$start=0;  //текуща стартова позиция
 
-$max_pages = ceil($num/$rowsPerPage); // брой на страниците
-$cur = ceil($start/$rowsPerPage)+1; // текуща страница
+$max_pages = ceil($num/$rowsPerPage); //брой на страниците
+$cur = ceil($start/$rowsPerPage)+1; //текуща страница
 ?>
 
 <table border="0" align="center" cellpadding="0" cellspacing="0">
@@ -283,6 +286,7 @@ $cur = ceil($start/$rowsPerPage)+1; // текуща страница
 									<?php
 								}
 							}
+		
 							$pg++;
 						}
 						if(($start+$eitherside)<$num)print (" .... ");
@@ -300,7 +304,6 @@ $cur = ceil($start/$rowsPerPage)+1; // текуща страница
 	</tr>
 
 </table>
-
 </div>
 
 
